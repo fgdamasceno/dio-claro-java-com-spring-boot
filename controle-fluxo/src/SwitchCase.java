@@ -29,10 +29,9 @@ public class SwitchCase {
 		default: {
 			System.out.println("Indefinido");
 		}
-		
+
 		}
-		
-		
+
 	}
 
 }
