@@ -66,7 +66,7 @@ public class CalculadoraInvestimento {
 	public double calcularLucroLiquido() {
 		return calcularValorBrutoInvestimento() - (this.aporteInicial + (this.aporteMensal * this.periodoMeses));
 	}
-	
+
 	public double calcularValorPagoImposto() {
 		return calcularValorBrutoInvestimento() - calcularValorLiquidoInvestimento();
 	}
@@ -88,17 +88,15 @@ public class CalculadoraInvestimento {
 	}
 
 	@Override
-	// TODO: implementar toString para mostrar valores e resultados
 	public String toString() {
 		return String.format(
 				"RESULTADO:%n" + "Investimento inicial: R$ %.2f%n" + "Investimento mensal:  R$ %.2f%n"
 						+ "Prazo: %d meses%n" + "Rentabilidade: %.2f%% a.a.%n" + "====================%n"
 						+ "Valor Total Bruto: R$ %.2f%n" + "Valor investido: R$ %.2f%n" + "Valor em juros: R$ %.2f%n"
-						+ "Valor pago em imposto: R$ %.2f%n"
-						+ "Valor Total liquido: R$ %.2f%n",
+						+ "Valor pago em imposto: R$ %.2f%n" + "Valor Total liquido: R$ %.2f%n",
 				this.aporteInicial, this.aporteMensal, this.periodoMeses, this.taxaAnual,
-				calcularValorBrutoInvestimento(), calcularMontanteAplicado(), calcularLucroLiquido(), calcularValorPagoImposto(),
-				calcularValorLiquidoInvestimento());
+				calcularValorBrutoInvestimento(), calcularMontanteAplicado(), calcularLucroLiquido(),
+				calcularValorPagoImposto(), calcularValorLiquidoInvestimento());
 	}
 
 }
